@@ -35,10 +35,11 @@ jobs:
       - name: Test & Code Coverage
         run: npm test -- --coverage
         
-      - name: Upload Code Coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        env:
+          token: { secrets.CODECOV_TOKEN }}
+          slug: IsmaelMours/chat-app-frontend
           
       - name: Build Package
         env:
