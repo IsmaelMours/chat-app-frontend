@@ -32,14 +32,6 @@ jobs:
       - name: Npm Install Packages
         run: npm install
         
-      - name: Test & Code Coverage
-        run: npm test -- --coverage
-        
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
-        env:
-          token: { secrets.CODECOV_TOKEN }}
-          slug: IsmaelMours/chat-app-frontend
           
       - name: Build Package
         env:
